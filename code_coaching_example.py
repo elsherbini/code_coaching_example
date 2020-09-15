@@ -73,8 +73,8 @@ for p in range(len(aaseqs[0]) - 5):
         # when I added this line I got an error
         middle_aa = query[3]
         # looking for GGDEF or GGEEF motif
-        if query[:2] == "GG" and query[3] in ["D","E"] and query[4:] == "EF":
-            matches.append(n + " " + str(p) + " " + query[3])
+        if query[:2] == "GG" and middle_aa in ["D","E"] and query[4:] == "EF":
+            matches.append(n + " " + str(p) + " " + middle_aa)
     i = i + 1
 
 f = open("matches.txt", "w")
